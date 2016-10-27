@@ -1,0 +1,218 @@
+@import 'jeet'
+@import '_settings'
+
+global-reset()
+normalize-css()
+border-box-html()
+base()
+// edit()
+
+@import '_typography'
+
+
+body
+  overflow: hidden
+  background: black
+  +above(799px)
+    -webkit-overflow-scrolling: touch
+
+p
+  margin-bottom: 1em
+
+a.current
+  padding-bottom: 3px
+  border-bottom: 5px white solid
+
+h1, h2, h3, h4, p
+  cursor: default
+  color: white
+
+header
+  position: fixed
+  width: 100vw
+  top: 32px
+  z-index: 999
+  background-color: transparent !important
+  +above(799px)
+    #logo
+      width: 100%
+      min-width: 800px
+      text-align: center
+      img
+        width: 195px
+    #mobileMenu
+      display: none
+  #menu
+    text-transform: uppercase
+    position: fixed
+    top: 32px
+    width: 100%
+    .inner
+      display: block
+      max-width: 100vh
+      min-width: 840px
+      margin: 0 auto
+    .left
+      float: left
+    .right
+      float: right
+    a
+      margin: 0 35px
+  #arrows
+    width: 130vh
+    margin: 0 auto
+    .button
+      margin-top: 30vh
+      cursor: pointer
+    .prev
+      float: left
+    .next
+      float: right
+  #pager
+    // display: none
+    position: fixed
+    bottom: 7vh
+    width: 100vw
+    height: 5px
+    .inner
+      width: 100vh
+      height: 5px
+      margin: 0 auto
+      text-align: center
+      .page
+        border-top: 2px white solid
+        width: 7vh
+        margin: 0 1vh
+        display: inline-block
+      .page.current
+        border-top: 7px white solid
+      .page:hover
+        border-top: 7px white solid
+
+
+nav
+  .button
+    width: 58px
+
++above(799px)
+  #sections
+    display: flex
+    align-content: flex-start
+    flex-wrap: nowrap
+    width: calc(100vw * 10)
+
++above(799px)
+  section
+    width: 100vw
+    height: 100vh
+    padding 0
+    margin 0
+    overflow hidden
+    .inner
+      // width: 900px
+      width: 110vh // width relative to the browser height
+      margin: 20vh auto 10vh
+      height: 70vh
+      h1, h2, article
+        position: relative
+        z-index: 100
+      aside
+        position: absolute
+        z-index: 50
+        height: 70vh
+        display: flex
+        align-items: flex-end
+        img
+          height: 60vh
+          align-self: center
+
+
+// ----------------------- mixins
+
+halfText()
+  article
+    padding-top: 3vh
+    padding-right: 7vh
+    width: 50%
+    margin-left: 50%
+
+centerText()
+  article
+    width: 80%
+    margin: 7vh auto
+    text-align: center
+
+// ------------------------------
+
++above(799px)
+  #section1
+    article
+        padding-top: 10vh
+        padding-left: 22%
+
+  #section2
+    halfText()
+    article
+      padding-top: 12vh
+
+  #section3
+    halfText()
+    h1
+      font-size: 6.5vh
+    article
+      padding-top: 14vh
+
+  #section4
+    halfText()
+    img
+      height: 70vh
+      padding-left: 4vh
+    article
+      padding-top: 10vh
+
+  #section5
+    h1
+      line-height: 1.2em
+    centerText()
+    article
+      text-align: center
+      width: 75%
+
+  #section6
+    halfText()
+    img
+      padding-left: 10vh
+    article
+      padding-right: 10vh
+      padding-top: 14vh
+
+  #section7
+    halfText()
+    img
+      padding-left: 8vh
+    article
+      padding-top: 14vh
+      padding-right: 10vh
+
+  #section8
+    centerText()
+    h1
+      line-height: 1.2em
+
+  #section9
+    centerText()
+    h1
+      line-height: 1.25em
+    ol
+      list-style: decimal
+      padding-left: 1em
+      li
+        margin-bottom: 1em
+
+  #section10
+    centerText()
+    article
+      text-align: center
+
+
+@import '_responsive'

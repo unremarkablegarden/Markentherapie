@@ -1,0 +1,117 @@
+// LAPTOP & DESKTOP
+// +above(1224px)
+// +between(1024px, 1223px)
+// +above(1024px)
+// +below(1223px)
+// +below(1224px)
+
+// TABLET
+// +between(769px, 1024px)
+// +below(1023px)
+// +between(769px, 1023px)
+
+// MOBILE
+// +above(769px)
+// +below(768px)
+
++below(800px)
+  body
+    overflow-x: hidden
+    overflow-y: auto
+    -webkit-overflow-scrolling: touch
+  header
+    background-color: transparent !important
+    #logo
+      width: 50vw
+      margin: 0 auto
+      text-align: center
+    #mobileMenu
+      z-index: 9999
+      width: 35px
+      position: fixed
+      top: 39px
+      right: 20px
+      .button
+        cursor: pointer
+      .close
+        display: none
+        width: 22px
+        position: relative
+        right: 5px
+        top: -5px
+
+    #menu
+      display: block
+      left: 100vw
+      top: 0
+      background: white
+      z-index: 999
+      border-width: 20px
+      border-style: solid
+      padding: 15vh 20px
+      height: 100vh
+      text-align: center
+      .inner
+        min-width: 100%
+        .left, .right
+          float: none
+        a
+          margin: 0
+          display: block
+          margin-bottom: 4em
+    #arrows
+      display: none
+    #pager
+      display: none
+
+  $h1 = 11vw
+
+  h1
+    font-size: $h1
+  h2
+    font-size: ($h1 * 0.8)
+  h3
+    font-size: ($h1 * 0.6)
+  h4
+    font-size: ($h1 * 0.52)
+
+  section:first-child
+    padding-top: 18vh
+
+  section
+    width: 100%
+    min-height: 100vh
+    padding 0 0 6vh 0
+    margin 0
+    .inner
+      width: 100%
+      h1, h2, article
+        position: relative
+        z-index: 100
+        margin-left: auto
+        margin-right: auto
+      h1, h2, h3
+        max-width: 90%
+      h1
+        margin-bottom: 0.7em
+        padding-top: 0.2em
+      article
+        width: 70%
+        p
+          font-size: 0.9em
+      aside
+        padding-top: 2vh
+        position: relative
+        z-index: 50
+        width: 100%
+        text-align: center
+        img
+          height: 40vh
+
+  #section1 .inner h1
+      margin-bottom: 0.3em
+
+  #section9, #section10
+    text-align: center
+    h1
+      padding-top: 10vh

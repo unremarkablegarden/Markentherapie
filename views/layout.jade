@@ -1,0 +1,24 @@
+doctype html
+html
+
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge, chrome=1')
+    meta(name='description', content='Marken müssen sich wandeln')
+    meta(name='author', content= "Heldisch")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    
+    title= "Markentherapie"
+    
+    link(rel='shortcut icon', href='/img/favicon.ico', type='image/x-icon')
+
+    link(rel='stylesheet' href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Roboto:300|Satisfy&subset=latin,latin-ext")
+    != css()
+
+  body
+    block content
+
+    script(src= jquery)
+    script(src= jqueryui)
+    script(src= '/js/vendor/debounce.min.js')
+    != js()

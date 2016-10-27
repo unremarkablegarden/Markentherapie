@@ -1,0 +1,77 @@
+extends layout
+
+block content
+  header#header.c50
+    #logo
+      a(href= "#", class="home")
+        img(src= "/img/logo.svg")
+
+    nav#menu
+      .inner
+        .left
+          a(href= "#", class="a1") Ursache
+          a(href= "#", class="a2") Strategie
+        .right
+          a(href= "#", class="a3") Workflow
+          a(href= "#", class="a4") Impressum
+          
+    #mobileMenu
+      .button.toggle
+        img(src= "/img/menu.svg")
+      .button.close
+        //- img(src= "/img/x.svg")
+        //- <defs><style>.fill{fill:#000000;}</style></defs>
+        :verbatim
+          <svg id="close" data-name="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.13 26.13"><title>x</title><polygon class="fill" points="26.13 2.74 23.39 0 13.06 10.32 2.74 0 0 2.74 10.32 13.06 0 23.39 2.74 26.13 13.06 15.8 23.39 26.13 26.13 23.39 15.8 13.06 26.13 2.74"/></svg>
+
+    nav#arrows
+      .button.prev
+        img(src= "/img/arrow-left.svg")      
+      .button.next
+        img(src= "/img/arrow-right.svg")
+        
+    #pager
+      .inner
+        .page.current &nbsp;  
+        .page &nbsp;
+        .page &nbsp;
+        .page &nbsp;
+        .page &nbsp;
+        .page &nbsp;
+        .page &nbsp;
+        .page &nbsp;
+        .page &nbsp;
+        .page &nbsp;
+        
+
+  #sections
+    section(data-color='c50', data-waypoint='home')#section1.section.c50.current.home
+      .inner
+        include ../_content/_section1.jade
+    section(data-color='c60')#section2.section.c60
+      .inner
+        include ../_content/_section2.jade
+    section(data-color='c70', data-waypoint='a0')#section3.section.c70.a0.waypoint
+      .inner
+        include ../_content/_section3.jade
+    section(data-color='c80', data-waypoint='a1')#section4.section.c80.a1.waypoint
+      .inner  
+        include ../_content/_section4.jade
+    section(data-color='c80', data-waypoint='a1')#section5.section.c80.waypoint
+      .inner  
+        include ../_content/_section5.jade
+    section(data-color='c90', data-waypoint='a2')#section6.section.c90.a2.waypoint
+      .inner
+        include ../_content/_section6.jade
+    section(data-color='c00')#section7.section.c00
+      .inner
+        include ../_content/_section7.jade
+    section(data-color='c00', data-waypoint='a2')#section8.section.c00.waypoint
+      .inner
+        include ../_content/_section8.jade
+    section(data-color='c00', data-waypoint='a3')#section9.section.c00.a3.waypoint
+      .inner
+        include ../_content/_section9.jade
+    section(data-color='cKontakt', data-waypoint='a4')#section10.section.cKontakt.a4.waypoint
+      .inner
+        include ../_content/_section10.jade
